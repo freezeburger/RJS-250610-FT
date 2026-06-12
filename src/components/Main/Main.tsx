@@ -8,7 +8,7 @@ import * as Hooks from '@/hooks';
 import { MainWrapper } from './Main.styled';
 
 
-interface MainProps extends PropsWithChildren{ }
+interface MainProps extends PropsWithChildren { }
 
 
 const Main: FC<MainProps> = ( { children }) => {

@@ -5,6 +5,7 @@ import React, { FC } from 'react';
 import * as Hooks from '@/hooks';
 
 /* Local Imports */
+// import './Footer.style.css';
 import './Footer.style.scss';
 
 interface FooterProps { }

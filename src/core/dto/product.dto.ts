@@ -1,4 +1,3 @@
-
 import * as Generics from '../types/generic.types'
 
 export interface ProductDTO extends Generics.WithUniqueId {
@@ -11,11 +10,11 @@ export interface ProductDTO extends Generics.WithUniqueId {
   stock: number
   tags: Generics.ShortText[]
   brand: Generics.ShortText
-  sku: string
+  sku: Generics.ShortText
   weight: number
   dimensions: Dimensions
-  warrantyInformation: Generics.ShortText
-  shippingInformation: Generics.ShortText
+  warrantyInformation: Generics.LongText
+  shippingInformation: Generics.LongText
   availabilityStatus: Generics.ShortText
   reviews: Review[]
   returnPolicy: Generics.LongText
@@ -24,13 +23,13 @@ export interface ProductDTO extends Generics.WithUniqueId {
   images: Generics.ImageUrl[]
   thumbnail: Generics.ImageUrl
 }
- 
+
 export interface Dimensions {
   width: number
   height: number
   depth: number
 }
- 
+
 export interface Review {
   rating: number
   comment: Generics.LongText
@@ -38,11 +37,10 @@ export interface Review {
   reviewerName: Generics.ShortText
   reviewerEmail: Generics.ShortText
 }
- 
+
 export interface Meta {
   createdAt: string
   updatedAt: string
   barcode: string
   qrCode: string
 }
- 

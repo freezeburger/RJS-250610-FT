@@ -4,20 +4,31 @@
  */
 import * as Generics from "./generic.types";
 
-export type ENDPOINTS = 'notifications' | 'products' | 'flights' | 'orders';
+export type ENDPOINTS = `/${Lowercase<string>}s`;
+
+
+export type CrudResponse<D> = {
+  status: 'success';
+  message: string;
+  data: D;
+} | {
+  status: 'error';
+  message: string;
+};
+
 
 export interface CrudService<T extends Generics.WithUniqueId> {
 
-  API: `/${ENDPOINTS}`;
+  API: ENDPOINTS;
 
-  create(item: Omit<T, 'id'>): Promise<T>;
+  create(item: Omit<T, 'id'>): Promise<CrudResponse<T>>;
 
-  read(): Promise<T[]>;
-  read(id: Generics.UniqueId): Promise<T | null>;
-  read(id?: Generics.UniqueId): Promise<T | T[] | null>;
+  read(): Promise<CrudResponse<T[]>>;
+  read(id: Generics.UniqueId): Promise<CrudResponse<T | null>>;
+  read(id?: Generics.UniqueId): Promise<CrudResponse<T | T[] | null>>;
 
-  update(target: T, update: Partial<Omit<T, 'id'>>): Promise<T>;
+  update(target: T, update: Partial<Omit<T, 'id'>>): Promise<CrudResponse<T>>;
 
-  delete(target: T): Promise<T>;
+  delete(target: T): Promise<CrudResponse<T>>;
 
 }

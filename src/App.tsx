@@ -10,22 +10,22 @@ function App() {
 
   return (
     <>
-      <UI.Header accent='tertiary'></UI.Header>
+        <UI.Header accent='tertiary'></UI.Header>
 
-      <BrowserRouter>
-        
-        <UI.Nav></UI.Nav>
+        <BrowserRouter>
 
-        <Routes>
-          <Route path="/" element={<Views.Home />} />
+          <UI.Nav></UI.Nav>
 
-          <Route path="/products" element={<Views.Products />} />
-          <Route path="/flights" element={<Views.Flights />} />
-          <Route path="/users" element={<Views.Users />} />
+          <Routes>
+            <Route path="/" element={<Views.Home />} />
 
-        </Routes>
-      </BrowserRouter>
-      <UI.Footer></UI.Footer>
+            <Route path="/products" element={<Views.Products />} />
+            <Route path="/flights" element={<Views.Flights />} />
+            <Route path="/users" element={<Views.Users />} />
+
+          </Routes>
+        </BrowserRouter>
+        <UI.Footer></UI.Footer>
     </>
   )
 }

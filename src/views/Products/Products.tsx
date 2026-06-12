@@ -16,6 +16,8 @@ const Products: FC<ProductsProps> = () => {
 
    Hooks.useDocumentTitle('Products View');
 
+   Hooks.useProductApiReducer(true);
+
    return (
       <div className="Products" data-testid="Products">
          <UI.Main>

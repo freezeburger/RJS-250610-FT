@@ -1,7 +1,7 @@
 /**
 * @description Doit être un identifiant unique pour un item au sein d'une collection.
 */
-export type UniqueId = number | string;
+export type UniqueId = string;
  
 /**
 * @description Chaîne de caractères de longueur variable.
@@ -29,4 +29,6 @@ export type Category = "beauty" | "fragrances" | "groceries" | "furniture";
 export interface WithUniqueId {
     id: UniqueId
 }
+
+
  
