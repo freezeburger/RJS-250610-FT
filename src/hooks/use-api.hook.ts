@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 
 type API = "products" | "flights" ;
 
-
 type ApiDataMap = {
   products: ProductDTO;
   flights: FlightDTO;
@@ -46,6 +45,7 @@ function useApi<K extends API>(api: K) {
 
 
 const DumComponent = () => {
+    
   const { data: products } = useApi("products");
   const { data: flights } = useApi("flights");  
 
