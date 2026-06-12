@@ -7,20 +7,20 @@ import * as Features from '@/containers';
 import * as Hooks from '@/hooks';
 
 /* Local Imports */
-import './Home.style.css';
+import './Users.style.css';
 
 
-interface HomeProps {}
+interface UsersProps {}
 
-const Home: FC<HomeProps> = () => {
+const Users: FC<UsersProps> = () => {
 
-   Hooks.useDocumentTitle('Home View');
+   Hooks.useDocumentTitle('Users View');
 
    return (
-   <div className="Home" data-testid="Home">
-      <UI.Main>Home Content</UI.Main>
+   <div className="Users" data-testid="Users">
+      <UI.Main>Users Content</UI.Main>
    </div>
    )
 };
 
-export default Home;
+export default Users;

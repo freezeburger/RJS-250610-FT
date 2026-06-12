@@ -7,5 +7,9 @@ export interface UISize {
 }
 
 export interface UIActionnable {
-   action:()=>void;
+   action:()=>any;
+}
+
+export interface UIAccent {
+   accent: 'primary' | 'secondary' | 'tertiary';
 }
